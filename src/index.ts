@@ -23,7 +23,7 @@ const typeDefs = `#graphql
 
 const books = [
   {
-    title: "The Awakeningsss",
+    title: "The Awakening",
     author: "Kate Chopin",
   },
   {
@@ -51,8 +51,12 @@ const server = new ApolloServer({
 //  1. creates an Express app
 //  2. installs your ApolloServer instance as middleware
 //  3. prepares your app to handle incoming requests
-const { url } = await startStandaloneServer(server, {
-  listen: { port: 4000 },
-});
 
-console.log(`🚀  Server ready at: ${url}`);
+const serverStart = async () => {
+  const { url } = await startStandaloneServer(server, {
+    listen: { port: 4000 },
+  });
+  console.log(`🚀  Server ready at: ${url}`);
+};
+
+serverStart();
