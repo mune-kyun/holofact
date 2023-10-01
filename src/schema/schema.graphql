@@ -11,16 +11,17 @@ type Vtuber {
   profile: String
   funFacts: [String]!
 
-  gen: Generation!
+  generation: Generation!
 }
 
 type Generation {
   name: String!
-  data: String!
+  date: String!
 
   members: [Vtuber]!
 }
 
 type Query {
   books: [Book]
+  generations: [Generation]
 }
