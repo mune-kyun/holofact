@@ -3,6 +3,24 @@ type Book {
   author: String
 }
 
+type Vtuber {
+  name: String!
+  nickname: [String]!
+  birthday: String
+  height: Int
+  profile: String
+  funFacts: [String]!
+
+  gen: Generation!
+}
+
+type Generation {
+  name: String!
+  data: String!
+
+  members: [Vtuber]!
+}
+
 type Query {
   books: [Book]
 }
