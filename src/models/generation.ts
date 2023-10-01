@@ -1,13 +1,13 @@
 import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
-const bookSchema = new Schema(
+const generationSchema = new Schema(
   {
-    title: {
+    name: {
       type: String,
       required: true,
     },
-    author: {
+    date: {
       type: String,
       required: true,
     },
@@ -15,5 +15,5 @@ const bookSchema = new Schema(
   { timestamps: true }
 );
 
-const BookModel = mongoose.model("Book", bookSchema);
-export default BookModel;
+const GenerationModel = mongoose.model("Generation", generationSchema);
+export default GenerationModel;

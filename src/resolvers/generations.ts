@@ -1,8 +1,8 @@
-const data = [{ name: "Gen 0", date: "7 September 2017" }];
+import GenerationModel from "../models/generation";
 
 const resolvers = {
   Query: {
-    generations: async () => await data,
+    generations: async () => await GenerationModel.find(),
   },
   nestedResolve: {
     Generation: {
