@@ -1,17 +1,8 @@
-const books = [
-  {
-    title: "The Awakeningss",
-    author: "Kate Chopin",
-  },
-  {
-    title: "City of Glass",
-    author: "Paul Auster",
-  },
-];
+import BookModel from "../models/book";
 
 const resolvers = {
   Query: {
-    books: () => books,
+    books: async () => await BookModel.find(),
   },
 };
 
