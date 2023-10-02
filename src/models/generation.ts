@@ -3,6 +3,10 @@ const Schema = mongoose.Schema;
 
 const generationSchema = new Schema(
   {
+    idName: {
+      type: String,
+      required: true,
+    },
     name: {
       type: String,
       required: true,
@@ -15,5 +19,4 @@ const generationSchema = new Schema(
   { timestamps: true }
 );
 
-const GenerationModel = mongoose.model("Generation", generationSchema);
-export default GenerationModel;
+export const GenerationModel = mongoose.model("Generation", generationSchema);

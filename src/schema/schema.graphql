@@ -3,10 +3,10 @@ type Vtuber {
   nickname: [String]!
   birthday: String
   height: Int
-  profile: String
+  greeting: String
   funFacts: [String]!
 
-  generation: Generation!
+  generation: [Generation!]!
 }
 
 type Generation {
@@ -18,4 +18,5 @@ type Generation {
 
 type Query {
   generations: [Generation]
+  vtubers: [Vtuber]
 }

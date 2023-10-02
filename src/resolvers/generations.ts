@@ -1,4 +1,4 @@
-import GenerationModel from "../models/generation";
+import { GenerationModel, VtuberModel } from "../models";
 
 const resolvers = {
   Query: {
@@ -6,17 +6,8 @@ const resolvers = {
   },
   nestedResolve: {
     Generation: {
-      members: async () =>
-        await [
-          {
-            name: "String!",
-            nickname: ["String"],
-            birthday: "String",
-            height: 5,
-            profile: "String",
-            funFacts: ["String"],
-          },
-        ],
+      members: async (parent) =>
+        await VtuberModel.find({ generation: parent.idName }),
     },
   },
 };
