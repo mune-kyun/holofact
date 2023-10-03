@@ -1,3 +1,7 @@
+// https://virtualyoutuber.fandom.com/wiki/Sakura_Miko
+// https://hololive.hololivepro.com/en/talents?gp=1stgen
+// https://hololive.wiki/wiki/Hololive_1st_Generation
+
 const getData = [
   {
     idName: "0",
