@@ -10,6 +10,7 @@ type Vtuber {
 }
 
 type Generation {
+  idName: String!
   name: String!
   date: String!
 
@@ -18,6 +19,7 @@ type Generation {
 
 type Query {
   generations: [Generation]
+  generation(idName: String!): Generation
   vtubers: [Vtuber]
   vtuber(name: String!): Vtuber
 }
