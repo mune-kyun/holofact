@@ -34,4 +34,15 @@ const vtuberData = [
     ],
     generation: ["2"],
   },
+  {
+    name: "Murasaki Shion",
+    nickname: ["Garlic", "Kusogaki"],
+    birthday: "8 December",
+    height: 145,
+    greeting: "Hellshio! Murasaki Shion here!",
+    funFacts: [
+      "Shion is a smug, cheeky brat who speaks bluntly without the usual politeness/consideration associated with the Japanese language, and flirts shamelessly with other hololive members.",
+    ],
+    generation: ["2"],
+  },
 ];
