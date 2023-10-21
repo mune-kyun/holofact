@@ -1,5 +1,6 @@
 type Vtuber {
   name: String!
+  imgUrl: String
   nickname: [String]!
   birthday: String
   height: Int

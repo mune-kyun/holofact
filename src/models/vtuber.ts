@@ -7,6 +7,9 @@ const vtuberSchema = new Schema(
       type: String,
       required: true,
     },
+    imgUrl: {
+      type: String,
+    },
     nickname: {
       type: [String],
       required: true,

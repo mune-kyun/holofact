@@ -33,6 +33,8 @@ const generationData = [
 const vtuberData = [
   {
     name: "Tokino Sora",
+    imgUrl:
+      "https://hololive.hololivepro.com/wp-content/uploads/2021/04/unnamed-file-6-855x1536.png",
     nickname: ["Sora-chan", "Tokino Soda"],
     birthday: "15 May",
     height: 160,
@@ -44,6 +46,8 @@ const vtuberData = [
   },
   {
     name: "Roboco",
+    imgUrl:
+      "https://hololive.hololivepro.com/wp-content/uploads/2020/06/roboco-san_pr-img_06.png",
     nickname: ["Roboco-san", "Roborobo"],
     birthday: "23 May",
     height: 154,
@@ -55,6 +59,8 @@ const vtuberData = [
   },
   {
     name: "Sakura Miko",
+    imgUrl:
+      "https://hololive.hololivepro.com/wp-content/uploads/2023/02/Sakura-Miko_pr-img_01.png",
     nickname: ["Miko-chi", "Elite Miko"],
     birthday: "5 March",
     height: 152,
