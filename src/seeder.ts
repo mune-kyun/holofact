@@ -1,8 +1,26 @@
+import mongoose from "mongoose";
+import { GenerationModel, VtuberModel } from "./models";
+
+const db = "mongodb://127.0.0.1:27017/holofact";
+
+mongoose.connect(db).catch((err) => console.log(err));
+
+const seedDB = async () => {
+  await GenerationModel.deleteMany({});
+  await GenerationModel.insertMany(generationData);
+  await VtuberModel.deleteMany({});
+  await VtuberModel.insertMany(vtuberData);
+};
+
+seedDB().then(() => {
+  mongoose.connection.close();
+});
+
 // https://virtualyoutuber.fandom.com/wiki/Sakura_Miko
 // https://hololive.hololivepro.com/en/talents?gp=1stgen
 // https://hololive.wiki/wiki/Hololive_1st_Generation
 
-const getData = [
+const generationData = [
   {
     idName: "0",
     name: "Gen 0",
@@ -13,6 +31,28 @@ const getData = [
 ];
 
 const vtuberData = [
+  {
+    name: "Tokino Sora",
+    nickname: ["Sora-chan", "Tokino Soda"],
+    birthday: "15 May",
+    height: 160,
+    greeting: "Hey, Sora-tomo! How are you all doing? It's me, Tokino Sora!",
+    funFacts: [
+      "She loves horror games and singing, and has always dreamed of performing in Yokohama Arena.",
+    ],
+    generation: ["0"],
+  },
+  {
+    name: "Roboco",
+    nickname: ["Roboco-san", "Roborobo"],
+    birthday: "23 May",
+    height: 154,
+    greeting: "Hellobo! Roboco here!",
+    funFacts: [
+      "She is great at shooting except in video games, but likes to run over people in them.",
+    ],
+    generation: ["0"],
+  },
   {
     name: "Sakura Miko",
     nickname: ["Miko-chi", "Elite Miko"],

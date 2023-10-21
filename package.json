@@ -6,7 +6,8 @@
   "scripts": {
     "compile": "tsc",
     "start": "npm run compile && node ./dist/index.js",
-    "dev": "npx nodemon ./src/index.ts"
+    "dev": "npx nodemon ./src/index.ts",
+    "seed": "tsc --outDir dist ./src/seeder.ts && node ./dist/seeder.js"
   },
   "keywords": [],
   "author": "",
