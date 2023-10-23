@@ -23,4 +23,5 @@ type Query {
   generation(idName: String!): Generation
   vtubers: [Vtuber]
   vtuber(name: String!): Vtuber
+  fact(name: String): Vtuber
 }
