@@ -7,9 +7,12 @@ const resolvers = {
     vtuber: async (_, { name }) => {
       const _name = startCase(name);
 
-      return await VtuberModel.findOne({
+      const data = await VtuberModel.findOne({
         name: { $regex: _name },
       });
+      data["funFacts"] = [data.funFacts[random(0, data.funFacts.length - 1)]];
+
+      return data;
     },
     fact: async (_, { name }) => {
       if (!name)
